@@ -70,7 +70,8 @@ def plot_training_history(history, model_name):
 
     plt.tight_layout()
 
-    file_path = f'img/graphs_img/{model_name}_training_history.png'
+    model_name_sanitized = model_name.replace(" ", "_")
+    file_path = f'img/graphs_img/{model_name_sanitized}_training_history.png'
     plt.savefig(file_path, dpi=300, bbox_inches='tight')
     plt.close()
     print(f'График сохранён в {file_path}')
@@ -99,7 +100,8 @@ def plot_test_metrics(metrics, model_name):
 
     plt.tight_layout()
 
-    file_path = f'img/graphs_img/{model_name}_test_metrics.png'
+    model_name_sanitized = model_name.replace(" ", "_")
+    file_path = f'img/graphs_img/{model_name_sanitized}_test_metrics.png'
     plt.savefig(file_path, dpi=300)
     plt.close()
     print(f'График сохранён в {file_path}')
